@@ -15,7 +15,7 @@
         </p>
     </div>
     <div class="col-md-4">
-        <h2>@ViewBag.LocalAddress</h2>
-        <p>And this is my local address</p>
+        <h2>@HttpContext.Current.Request.ServerVariables["SERVER_NAME"];</h2>
+        <p>And this is my server name</p>
     </div>
 </div>
