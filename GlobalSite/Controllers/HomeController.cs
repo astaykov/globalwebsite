@@ -36,7 +36,7 @@ namespace GlobalSite.Controllers
 
             foreach (IPAddress IPA in Dns.GetHostAddresses(Dns.GetHostName()))
             {
-                if (IPA.AddressFamily.ToString() == "InterNetwork")
+                if (IPA.AddressFamily.ToString() != "InterNetwork")
                 {
                     IP4Address = IPA.ToString();
                     break;
